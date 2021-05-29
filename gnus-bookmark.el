@@ -431,7 +431,7 @@ That is, all information but the name."
 (if gnus-bookmark-bmenu-mode-map
     nil
   (setq gnus-bookmark-bmenu-mode-map (make-keymap))
-  (suppress-keymap gnus-bookmark-bmenu-mode-map t)
+  ;; (suppress-keymap gnus-bookmark-bmenu-mode-map t)
   (define-key gnus-bookmark-bmenu-mode-map "q" 'quit-window)
   (define-key gnus-bookmark-bmenu-mode-map "\C-m" 'gnus-bookmark-bmenu-select)
   (define-key gnus-bookmark-bmenu-mode-map "v" 'gnus-bookmark-bmenu-select)

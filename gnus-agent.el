@@ -2602,7 +2602,7 @@ General format specifiers can also be used.  See Info node
 
 (unless gnus-category-mode-map
   (setq gnus-category-mode-map (make-sparse-keymap))
-  (suppress-keymap gnus-category-mode-map)
+  ;; (suppress-keymap gnus-category-mode-map)
 
   (gnus-define-keys gnus-category-mode-map
     "q" gnus-category-exit
