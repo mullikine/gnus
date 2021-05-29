@@ -2778,15 +2778,15 @@ See Info node `(gnus)Formatting Variables'."
 
 (defset gnus-article-mode-map
   (let ((keymap (make-sparse-keymap)))
-    (gnus-suppress-keymap keymap)
+    ;; (gnus-suppress-keymap keymap)
     keymap))
 (defset gnus-summary-mode-map
   (let ((keymap (make-keymap)))
-    (gnus-suppress-keymap keymap)
+    ;; (gnus-suppress-keymap keymap)
     keymap))
 (defset gnus-group-mode-map
   (let ((keymap (make-keymap)))
-    (gnus-suppress-keymap keymap)
+    ;; (gnus-suppress-keymap keymap)
     keymap))
 
 

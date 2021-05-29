@@ -147,7 +147,7 @@ If nil, a faster, but more primitive, buffer is used instead."
 
 (unless gnus-server-mode-map
   (setq gnus-server-mode-map (make-keymap))
-  (suppress-keymap gnus-server-mode-map)
+  ;; (suppress-keymap gnus-server-mode-map)
 
   (gnus-define-keys gnus-server-mode-map
     " " gnus-server-read-server-in-server-buffer
@@ -699,7 +699,7 @@ claim them."
 
 (unless gnus-browse-mode-map
   (setq gnus-browse-mode-map (make-keymap))
-  (suppress-keymap gnus-browse-mode-map)
+  ;; (suppress-keymap gnus-browse-mode-map)
 
   (gnus-define-keys
       gnus-browse-mode-map

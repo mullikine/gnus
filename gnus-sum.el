@@ -7358,7 +7358,7 @@ The state which existed when entering the ephemeral is reset."
 
 (defvar gnus-dead-summary-mode-map
   (let ((map (make-keymap)))
-    (suppress-keymap map)
+    ;; (suppress-keymap map)
     (substitute-key-definition 'undefined 'gnus-summary-wake-up-the-dead map)
     (dolist (key '("\C-d" "\r" "\177" [delete]))
       (define-key map key 'gnus-summary-wake-up-the-dead))

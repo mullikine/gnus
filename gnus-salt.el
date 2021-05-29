@@ -426,7 +426,7 @@ Two predefined functions are available:
 
 (defvar gnus-tree-mode-map
   (let ((map (make-keymap)))
-    (suppress-keymap map)
+    ;; (suppress-keymap map)
     (gnus-define-keys
         map
       "\r" gnus-tree-select-article
