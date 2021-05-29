@@ -4398,33 +4398,34 @@ If variable `gnus-use-long-file-name' is non-nil, it is
 
 (set-keymap-parent gnus-article-mode-map button-buffer-map)
 
-(gnus-define-keys gnus-article-mode-map
-  " " gnus-article-goto-next-page
-  [?\S-\ ] gnus-article-goto-prev-page
-  "\177" gnus-article-goto-prev-page
-  [delete] gnus-article-goto-prev-page
-  "\C-c^" gnus-article-refer-article
-  "h" gnus-article-show-summary
-  "s" gnus-article-show-summary
-  "\C-c\C-m" gnus-article-mail
-  "?" gnus-article-describe-briefly
-  "<" beginning-of-buffer
-  ">" end-of-buffer
-  "\C-c\C-i" gnus-info-find-node
-  "\C-c\C-b" gnus-bug
-  "R" gnus-article-reply-with-original
-  "F" gnus-article-followup-with-original
-  "\C-hk" gnus-article-describe-key
-  "\C-hc" gnus-article-describe-key-briefly
-  "\C-hb" gnus-article-describe-bindings
+(eval
+ `(gnus-define-keys gnus-article-mode-map
+   " " gnus-article-goto-next-page
+   [?\S-\ ] gnus-article-goto-prev-page
+   "\177" gnus-article-goto-prev-page
+   [delete] gnus-article-goto-prev-page
+   "\C-c^" gnus-article-refer-article
+   "h" gnus-article-show-summary
+   "s" gnus-article-show-summary
+   "\C-c\C-m" gnus-article-mail
+   "?" gnus-article-describe-briefly
+   "<" beginning-of-buffer
+   ">" end-of-buffer
+   "\C-c\C-i" gnus-info-find-node
+   "\C-c\C-b" gnus-bug
+   "R" gnus-article-reply-with-original
+   "F" gnus-article-followup-with-original
+   ,(kbd "<help> k") gnus-article-describe-key
+   ,(kbd "<help> c") gnus-article-describe-key-briefly
+   ,(kbd "<help> b") gnus-article-describe-bindings
 
-  "e" gnus-article-read-summary-keys
-  "\C-d" gnus-article-read-summary-keys
-  "\C-c\C-f" gnus-summary-mail-forward
-  "\M-*" gnus-article-read-summary-keys
-  "\M-#" gnus-article-read-summary-keys
-  "\M-^" gnus-article-read-summary-keys
-  "\M-g" gnus-article-read-summary-keys)
+   "e" gnus-article-read-summary-keys
+   "\C-d" gnus-article-read-summary-keys
+   "\C-c\C-f" gnus-summary-mail-forward
+   "\M-*" gnus-article-read-summary-keys
+   "\M-#" gnus-article-read-summary-keys
+   "\M-^" gnus-article-read-summary-keys
+   "\M-g" gnus-article-read-summary-keys))
 
 (substitute-key-definition
  'undefined 'gnus-article-read-summary-keys gnus-article-mode-map)
